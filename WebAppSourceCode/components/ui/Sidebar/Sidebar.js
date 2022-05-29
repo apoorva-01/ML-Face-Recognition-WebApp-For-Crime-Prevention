@@ -38,7 +38,6 @@ import {
 const structure = [
   { id: 32, label: "Face Detection", link: "/", icon: <MoodIcon /> },
   { id: 0, label: "Description", link: "/description", icon: <DescriptionIcon /> },
-  { id: 76, label: "Dataset", link: "/dataset", icon: <StorageIcon /> },
   {
     id: 1,
     label: "Tech Stack",
@@ -56,6 +55,7 @@ const structure = [
       { label: "Windows", link: "/windows" },
     ],
   },
+  { id: 76, label: "Dataset", link: "/dataset", icon: <StorageIcon /> },
   { id: 5, type: "divider" },
   { id: 6, type: "title", label: "HELP" },
   { id: 7, label: "Help", link: "mailto:vermaapoorva0510@gmail.com", icon: <HelpOutlineIcon /> },

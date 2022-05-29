@@ -29,19 +29,19 @@ function App() {
     // Loop and detect Faces
     setInterval(() => {
       detect(net);
-      async function alert(){
-        const video = webcamRef.current.video;
-        const img = tf.browser.fromPixels(video)
-        const resized = tf.image.resizeBilinear(img, [640, 480])
-        const casted = resized.cast('int32')
-        const expanded = casted.expandDims(0)
-        const obj = await net.executeAsync(expanded)
-        const x=await obj[6].array()
-        if(x[0][0]>=0.98){
-          // enqueueSnackbar('Alert, Criminal Detected',{ variant: 'error' }); 
-          alertEmail()}
-      }
-      alert()
+      // async function alert(){
+      //   const video = webcamRef.current.video;
+      //   const img = tf.browser.fromPixels(video)
+      //   const resized = tf.image.resizeBilinear(img, [640, 480])
+      //   const casted = resized.cast('int32')
+      //   const expanded = casted.expandDims(0)
+      //   const obj = await net.executeAsync(expanded)
+      //   const x=await obj[6].array()
+      //   if(x[0][0]>=0.98){
+      //     // enqueueSnackbar('Alert, Criminal Detected',{ variant: 'error' }); 
+      //     alertEmail()}
+      // }
+      // alert()
     }, 16.7);
   };
 
@@ -86,7 +86,7 @@ function App() {
       const ctx = canvasRef.current.getContext("2d");
 
       // Update drawing utility
-      requestAnimationFrame(() => { drawRect(boxes[0], classes[0], scores[0], 0.4, videoWidth, videoHeight, ctx) });
+      requestAnimationFrame(() => { drawRect(boxes[0], classes[0], scores[0], 0.7, videoWidth, videoHeight, ctx) });
 
       tf.dispose(img)
       tf.dispose(resized)

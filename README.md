@@ -5,7 +5,13 @@ This Notebook provides a complete set of code to be able to train and leverage y
 
 ![Architecture](./architecture.png)
 
-Supporting Material: 
+Supporting Material: https://drive.google.com/file/d/1pcG-72WVB-8UwsnUoz_L73FGz-k1Bvim/view?usp=sharing
+
+Web App Link: https://frme.igscs.in/login
+
+Username: Admin_1
+Password: 12345678
+
 
 #### Code is Platform Independent and can easily run on Linux, Windows & Google Colab.
 

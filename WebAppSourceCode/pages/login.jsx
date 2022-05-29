@@ -42,14 +42,11 @@ export default function SignInSide() {
         name,
         password,
       });
-
       dispatch({ type: 'USER_LOGIN', payload: data });
       Cookies.set('userInfo', data);
       router.push(redirect || '/');
     } catch (err) {
-      enqueueSnackbar('Wrong Credentials',
-        { variant: 'error' }
-      );
+      enqueueSnackbar('Wrong Credentials',{ variant: 'error' });
     }
   };
 
