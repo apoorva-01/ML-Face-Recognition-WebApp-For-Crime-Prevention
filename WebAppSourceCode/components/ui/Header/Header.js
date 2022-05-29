@@ -69,24 +69,17 @@ const messages = [
 ];
 
 const notifications = [
-  { id: 0, color: "warning", message: "" },
   {
     id: 1,
     color: "success",
     type: "info",
-    message: "What is the best way to get ...",
-  },
-  {
-    id: 2,
-    color: "secondary",
-    type: "notification",
-    message: "This is just a simple notification",
+    message: "Welcom to Face Recognition Project",
   },
   {
     id: 3,
     color: "primary",
     type: "e-commerce",
-    message: "12 new orders has arrived today",
+    message: "Web App for Preventing Crime",
   },
 ];
 
