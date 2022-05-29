@@ -3,16 +3,20 @@
 
 This Notebook provides a complete set of code to be able to train and leverage your own custom model.
 
+![Architecture](./architecture.png)
+
+Supporting Material: 
+
 #### Code is Platform Independent and can easily run on Linux, Windows & Google Colab.
 
-Google Colab Notebook Link: https://colab.research.google.com/drive/1IZN28VTu9jmbCwplff6QRR8CP2SylZIs?usp=sharing
+Google Colab Notebook Link: https://colab.research.google.com/drive/1NeGuc0xFChaScWOOub5GbGsoudWhNdH1?usp=sharing
 
 
 
 
 ## Steps to run on Google Colab
 
-Step 1. Open Notebook: https://colab.research.google.com/drive/1IZN28VTu9jmbCwplff6QRR8CP2SylZIs?usp=sharing
+Step 1. Open Notebook: https://colab.research.google.com/drive/1NeGuc0xFChaScWOOub5GbGsoudWhNdH1?usp=sharing
 
 Step 2. Set Notebook settings to GPU (It is required for training model)
 
