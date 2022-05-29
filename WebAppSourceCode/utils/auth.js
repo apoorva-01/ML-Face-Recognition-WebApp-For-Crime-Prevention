@@ -1,12 +1,12 @@
 import jwt from 'jsonwebtoken';
 
-const signToken = (customer) => {
+const signToken = (store) => {
   return jwt.sign(
     {
-      _id: customer._id,
-      name: customer.name,
-      email: customer.email,
-      isAdmin: customer.isAdmin,
+      _id: store._id,
+      name: store.name,
+      email: store.email,
+      storeName: store.storeName,
     },
 
     process.env.JWT_SECRET,
@@ -24,7 +24,7 @@ const isAuth = async (req, res, next) => {
       if (err) {
         res.status(401).send({ message: 'Token is not valid' });
       } else {
-        req.customer = decode;
+        req.store = decode;
         next();
       }
     });
@@ -32,12 +32,5 @@ const isAuth = async (req, res, next) => {
     res.status(401).send({ message: 'Token is not suppiled' });
   }
 };
-const isAdmin = async (req, res, next) => {
-  if (req.customer.isAdmin) {
-    next();
-  } else {
-    res.status(401).send({ message: 'customer is not admin' });
-  }
-};
 
-export { signToken, isAuth, isAdmin };
+export { signToken, isAuth };

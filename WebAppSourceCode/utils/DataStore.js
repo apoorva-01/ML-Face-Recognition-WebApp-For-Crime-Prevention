@@ -3,6 +3,36 @@ import { createContext, useReducer } from 'react';
 
 export const DataStore = createContext();
 const initialState = {
+  user: {
+    username: 'apoo',
+    name: '',
+    bio: '',
+    pic: '',
+    email: '',
+    phone: '',
+    country: '',
+  },
+  product: {
+    accessType:'download',
+    title: '',
+    slug: '',
+    status: false,
+    isFeatured:false,
+    isDeleted:false,
+    sku: '',
+    barcode:'',
+    type: '',
+    description: '',
+    categories: [],
+    features: [],
+    images: {},
+    pricing: {},
+    options: {},
+    size: {},
+    rating: 0,
+    numReviews: 0,
+    inventory: 0,
+  },
   darkMode: Cookies.get('darkMode') === 'ON' ? true : false,
   cart: {
     cartItems: Cookies.get('cartItems')
@@ -10,29 +40,14 @@ const initialState = {
       : [],
     shippingAddress: Cookies.get('shippingAddress')
       ? JSON.parse(Cookies.get('shippingAddress'))
-      : { location: {} },
+      : {},
     paymentMethod: Cookies.get('paymentMethod')
       ? Cookies.get('paymentMethod')
       : '',
   },
-  wishlist: {
-    wishlistItems: Cookies.get('wishlistItems')
-      ? JSON.parse(Cookies.get('wishlistItems'))
-      : [],
-    shippingAddress: Cookies.get('shippingAddress')
-      ? JSON.parse(Cookies.get('shippingAddress'))
-      : { location: {} },
-    paymentMethod: Cookies.get('paymentMethod')
-      ? Cookies.get('paymentMethod')
-      : '',
-  },
-  customerInfo: Cookies.get('customerInfo')
-    ? JSON.parse(Cookies.get('customerInfo'))
+  userInfo: Cookies.get('userInfo')
+    ? JSON.parse(Cookies.get('userInfo'))
     : null,
-
-  storeInfo: Cookies.get('storeInfo')
-  ? JSON.parse(Cookies.get('storeInfo'))
-  : null,
 };
 
 function reducer(state, action) {
@@ -61,48 +76,10 @@ function reducer(state, action) {
       Cookies.set('cartItems', JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
-    case 'WISHLIST_ADD_ITEM': {
-      const newItem = action.payload;
-      const existItem = state.wishlist.wishlistItems.find(
-        (item) => item._id === newItem._id
-      );
-      const wishlistItems = existItem
-        ? state.wishlist.wishlistItems.map((item) =>
-            item.name === existItem.name ? newItem : item
-          )
-        : [...state.wishlist.wishlistItems, newItem];
-      Cookies.set('wishlistItems', JSON.stringify(wishlistItems));
-      return { ...state, wishlist: { ...state.wishlist, wishlistItems } };
-    }
-    case 'WISHLIST_REMOVE_ITEM': {
-      const wishlistItems = state.wishlist.wishlistItems.filter(
-        (item) => item._id !== action.payload._id
-      );
-      Cookies.set('wishlistItems', JSON.stringify(wishlistItems));
-      return { ...state, wishlist: { ...state.wishlist, wishlistItems } };
-    }
     case 'SAVE_SHIPPING_ADDRESS':
       return {
         ...state,
-        cart: {
-          ...state.cart,
-          shippingAddress: {
-            ...state.cart.shippingAddress,
-            ...action.payload,
-          },
-        },
-     
-      };
-    case 'SAVE_SHIPPING_ADDRESS_MAP_LOCATION':
-      return {
-        ...state,
-        cart: {
-          ...state.cart,
-          shippingAddress: {
-            ...state.cart.shippingAddress,
-            location: action.payload,
-          },
-        },
+        cart: { ...state.cart, shippingAddress: action.payload },
       };
     case 'SAVE_PAYMENT_METHOD':
       return {
@@ -111,23 +88,16 @@ function reducer(state, action) {
       };
     case 'CART_CLEAR':
       return { ...state, cart: { ...state.cart, cartItems: [] } };
-    case 'CUSTOMER_LOGIN':
-      return { ...state, customerInfo: action.payload };
-    case 'STORE_SETUP':
-      return { ...state, storeInfo: action.payload };
-    case 'CUSTOMER_LOGOUT':
+    case 'USER_LOGIN':
+      return { ...state, userInfo: action.payload };
+  
+    case 'USER_LOGOUT':
       return {
         ...state,
-        customerInfo: null,
-        cart: {
-          cartItems: [],
-          shippingAddress: { location: {} },
-          paymentMethod: '',
-        },
-        wishlist: {
-          wishlistItems: [],
-        },
+        userInfo: null,
       };
+      case 'UPDATE_PRODUCT':
+        return { ...state, product: action.payload };
 
     default:
       return state;
