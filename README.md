@@ -59,9 +59,9 @@ a. Python 3.7–3.10
 
 b. pip version 19.0
 
-c. Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019
+c. Windows: Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019
 
-d.NVIDIA® GPU drivers version 450.80.02 or higher.
+d. NVIDIA® GPU drivers version 450.80.02 or higher.
 
 e. CUDA® Toolkit 11.2.
 
@@ -89,6 +89,8 @@ Step 4. Install dependencies and add virtual environment to the Python Kernel
 `pip install ipykernel`
 
 `python -m ipykernel install --user --name=frme`
+
+`pip install jupyter`
 
 
 Step 5. Run Notebook (Ensure you change the kernel to the virtual environment as shown below)
