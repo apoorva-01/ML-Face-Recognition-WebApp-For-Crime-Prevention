@@ -1,0 +1,145 @@
+.phone-container{
+margin-left: 10rem;
+}
+
+/* Phone Preview */
+
+.preview .preview-wrap {
+  width: 352px;
+  height: 724px;
+  padding: 16px;
+}
+.preview .preview-wrap:after {
+  content: "";
+  background-image: url(../../public/admin/phone.svg);
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.preview .preview-inner {
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  transform: translateZ(0);
+  overflow: scroll;
+}
+.preview .preview-inner::-webkit-scrollbar {
+  display: none;
+}
+.preview .preview-inner {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.preview .preview-area {
+  position: relative;
+  min-height: 100%;
+  padding: 60px 0 0 0;
+  z-index: 500;
+}
+@media screen and (max-width: 600px) {
+  .phone-container{
+    margin-left: 5.5rem;
+    }
+}
+
+/* Laptop */
+.laptop-container{
+  margin-left: 12rem;
+  }
+.preview-laptop .preview-wrap-laptop {
+  width: 724px;
+  height: 460px;
+  padding: 16px;
+}
+.preview-laptop .preview-wrap-laptop:after {
+  content: "";
+  background-image: url(../../public/admin/laptop.svg);
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -9rem;
+  left: -6rem;
+  right: -6rem;
+  bottom: -10rem;
+  pointer-events: none;
+  z-index: -100;
+}
+
+.preview-laptop .preview-inner-laptop {
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  transform: translateZ(0);
+  overflow: scroll;
+}
+.preview-laptop .preview-inner-laptop::-webkit-scrollbar {
+  display: none;
+}
+.preview-laptop .preview-inner-laptop {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.preview-laptop .preview-area-laptop {
+  position: relative;
+  min-height: 100%;
+  padding: 60px 0 0 0;
+  z-index: 500;
+}
+
+
+@media screen and (max-width: 600px) {
+  .laptop-container{
+    margin-left: 5rem;
+    }
+  .preview-laptop .preview-wrap-laptop {
+    width: 424px;
+    height: 290px;
+    padding: 16px;
+  }
+  .preview-laptop .preview-wrap-laptop:after {
+    content: "";
+    background-image: url(../../public/admin/laptop.svg);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -11rem;
+    left: -2.7rem;
+    right: -2.7rem;
+    bottom: -11rem;
+    pointer-events: none;
+    z-index: -100;
+  }
+  
+  .preview-laptop .preview-inner-laptop {
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    transform: translateZ(0);
+    overflow: scroll;
+  }
+  .preview-laptop .preview-inner-laptop::-webkit-scrollbar {
+    display: none;
+  }
+  .preview-laptop .preview-inner-laptop {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .preview-laptop .preview-area-laptop {
+    position: relative;
+    min-height: 100%;
+    padding: 60px 0 0 0;
+    z-index: 500;
+  }
+}

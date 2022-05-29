@@ -1,0 +1,26 @@
+{
+  "title": "IGSCS Store",
+  "titleTemplate": "%s - MakeMyCommerce Storefront",
+  "description": "Make My Commerce - https://makemycommerce.in",
+  "openGraph": {
+    "title": "Make My Commerce Storefront",
+    "description": "Make My Commerce - https://makemycommerce.in",
+    "type": "website",
+    "locale": "en_IE",
+    "url": "https://nextjs.org/commerce",
+    "site_name": "IGSCS",
+    "images": [
+      {
+        "url": "/card.png",
+        "width": 800,
+        "height": 600,
+        "alt": "Next.js Commerce"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@nextjs",
+    "site": "@nextjs",
+    "cardType": "summary_large_image"
+  }
+}

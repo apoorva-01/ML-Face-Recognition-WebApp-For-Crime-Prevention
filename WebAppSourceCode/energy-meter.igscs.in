@@ -1,0 +1,59 @@
+
+
+server {
+	# SSL configuration
+	 listen 443 ssl;
+	 listen [::]:443 ssl ;
+
+        server_name energy-meter.igscs.in www.energy-meter.igscs.in;
+
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        }
+       location ~ /\.ht {
+                deny all;
+        }
+
+	location / {
+		 proxy_pass http://0.0.0.0:3000;
+                 proxy_set_header Host             $host;
+                 proxy_set_header X-Real-IP        $remote_addr;
+                 proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+                 proxy_set_header X-Accel-Internal /internal-nginx-static-location;
+                access_log off;
+	}
+    ssl_certificate /etc/letsencrypt/live/energy-meter.igscs.in/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/energy-meter.igscs.in/privkey.pem; # managed by Certbot
+
+   
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name energy-meter.igscs.in www.energy-meter.igscs.in;
+
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        }
+       location ~ /\.ht {
+                deny all;
+        }
+
+	location / {
+		 proxy_pass http://0.0.0.0:3000;
+                 proxy_set_header Host             $host;
+                 proxy_set_header X-Real-IP        $remote_addr;
+                 proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+                 proxy_set_header X-Accel-Internal /internal-nginx-static-location;
+                access_log off;
+	}
+
+       
+}

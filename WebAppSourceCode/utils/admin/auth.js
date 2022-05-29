@@ -1,0 +1,36 @@
+import jwt from 'jsonwebtoken';
+
+const signToken = (store) => {
+  return jwt.sign(
+    {
+      _id: store._id,
+      name: store.name,
+      email: store.email,
+      storeName: store.storeName,
+    },
+
+    process.env.JWT_SECRET,
+    {
+      expiresIn: '30d',
+    }
+  );
+};
+const isAuth = async (req, res, next) => {
+  const { authorization } = req.headers;
+  if (authorization) {
+    // Bearer xxx => xxx
+    const token = authorization.slice(7, authorization.length);
+    jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
+      if (err) {
+        res.status(401).send({ message: 'Token is not valid' });
+      } else {
+        req.store = decode;
+        next();
+      }
+    });
+  } else {
+    res.status(401).send({ message: 'Token is not suppiled' });
+  }
+};
+
+export { signToken, isAuth };

@@ -1,0 +1,50 @@
+.bar{
+	margin:3rem auto;
+	border-radius:25px;
+	border:1px solid #dcdcdc;
+  }
+  .bar:hover{
+	box-shadow: 1px 1px 8px 1px #dcdcdc;
+  }
+  .bar:focus-within{
+	box-shadow: 1px 1px 8px 1px #dcdcdc;
+	outline:none;
+  }
+
+
+  .voice{
+	height:20px;
+	position:relative;
+	top:-10px;
+	left:10px;
+  }
+
+.result {
+	width: 600px;
+	margin-bottom: 30px;
+	font-size: 13px;
+	word-wrap: break-word;
+	display: block;
+	}
+
+.collapse {
+	line-height: 2px;
+	}
+
+.result h3 {
+	font-size: 18px;
+    color: #1a0dab;
+    font-weight: normal;
+	}
+
+.result a {
+	text-decoration: none;
+	}
+
+.result a:hover {
+	text-decoration: underline;
+	}
+
+.url {
+	color: #006621;
+	}
