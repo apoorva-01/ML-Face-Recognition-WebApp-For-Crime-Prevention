@@ -15,7 +15,7 @@ Username: Admin_1
 Password: 12345678
 
 
-<h4>Face Recognition Web Application for Crime Prevention.</h4><br/>
+<h4>Face Recognition Web Application for Crime Prevention.</h4>
 This code sample consists of Machine Learning Model & a Web Application for face recognition.
 
 <b>How it will prevent crime?</b><br/>
