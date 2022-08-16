@@ -5,11 +5,42 @@ This Notebook provides a complete set of code to be able to train and leverage y
 
 ![Architecture](./architecture.png)
 
+Briefly describe what this code sample does
+
+Face Recognition Web Application for Crime Prevention.
+This code sample consists of Machine Learning Model & a Web Application for face recognition.
+
+How it will prevent crime?
+Whenever a person is recognized with 98%+ accuracy, the web app sends an email to the admin and can also send it to Police. 
+
+How does it work?
+On executing file face_recognition_model.ipynb in the Github repository, the following steps are done:
+01) Capture images to train a model.
+02) Image Labelling of captured images
+03) Partitioning of labeled images in the Training & Testing section
+04) Model Training
+05) Model Evaluation
+06) Model Export (JSON file is created)
+
+Model Training Tech Stack: 
+01) Python
+02) Tensorflow Object Detection API
+03) OpenCV
+ 
+Then we host this JSON File and link it with our web application.
+The web application uses the deployed Machine Learning model and can detect faces with 98%+ accuracy within 4 sec.
+
+Web Application Tech Stack: 
+01) Backend: Next.JS, Node.JS
+02) Database: MongoDB
+03) Frontend: HTML5, CSS3, Javascript & JSX
+04) Version Control: Git
+
 Supporting Material: https://drive.google.com/file/d/1pcG-72WVB-8UwsnUoz_L73FGz-k1Bvim/view?usp=sharing
 
-Web App Link: https://frme.igscs.in/login
 
-Username: Admin_1
+Web App Link: https://frme.igscs.in/login
+Username: Admin_1 
 Password: 12345678
 
 
