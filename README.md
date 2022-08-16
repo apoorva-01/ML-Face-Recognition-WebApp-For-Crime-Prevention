@@ -5,9 +5,8 @@ This Notebook provides a complete set of code to be able to train and leverage y
 
 ![Architecture](./architecture.png)
 
-Briefly describe what this code sample does
 
-Face Recognition Web Application for Crime Prevention.
+<h4>Face Recognition Web Application for Crime Prevention.</h4>
 This code sample consists of Machine Learning Model & a Web Application for face recognition.
 
 How it will prevent crime?
