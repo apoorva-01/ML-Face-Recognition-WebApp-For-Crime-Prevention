@@ -19,6 +19,7 @@ Password: 12345678
 ### Consists of 2 main components:
 
 <b>01) Machine Learning Model:</b> is trained using labeled images and is capable of recognizing faces with 98%+ accuracy. Once the model is trained, it is exported as a JSON file and linked with the web application.
+
 <b>02) Web Application:</b> is designed to work with the deployed machine learning model and can detect faces with 98%+ accuracy within 4 seconds. The application uses a camera to capture images of people in a given area, which are then processed by the machine learning model to recognize the faces.
 
 
