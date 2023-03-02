@@ -6,9 +6,11 @@ The Face Recognition Web Application for Crime Prevention is an application that
 The system is designed to identify suspects by comparing their facial features with those in a database of known criminals. 
 
 <b>Supporting Material:</b> https://drive.google.com/file/d/1pcG-72WVB-8UwsnUoz_L73FGz-k1Bvim/view?usp=sharing
+
 <b>Web App Link:</b> https://frme.igscs.in/login 
 <br/>
 Username: Admin_1 
+<br/>
 Password: 12345678
 
 ## Architecture
@@ -16,8 +18,8 @@ Password: 12345678
 
 ### Consists of 2 main components:
 
-01) Machine Learning Model: is trained using labeled images and is capable of recognizing faces with 98%+ accuracy. Once the model is trained, it is exported as a JSON file and linked with the web application.
-02) Web Application: is designed to work with the deployed machine learning model and can detect faces with 98%+ accuracy within 4 seconds. The application uses a camera to capture images of people in a given area, which are then processed by the machine learning model to recognize the faces.
+<b>01) Machine Learning Model:</b> is trained using labeled images and is capable of recognizing faces with 98%+ accuracy. Once the model is trained, it is exported as a JSON file and linked with the web application.
+<b>02) Web Application:</b> is designed to work with the deployed machine learning model and can detect faces with 98%+ accuracy within 4 seconds. The application uses a camera to capture images of people in a given area, which are then processed by the machine learning model to recognize the faces.
 
 
 ### How it will prevent crime?
@@ -159,3 +161,8 @@ You can find it in Tensorflow/workspace/models/my_ssd_mobnet
 Step 10: Run all cells
 
 
+## Author - Apoorva Verma
+
+- [Linkedin](https://www.linkedin.com/in/apoorva-verma-aa045a202/)
+- [Resume Website](https://apoorva-verma.netlify.app/)
+- [Github](https://github.com/apoorva-01/)
