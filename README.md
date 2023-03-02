@@ -20,13 +20,14 @@ Password: 12345678
 02) Web Application: is designed to work with the deployed machine learning model and can detect faces with 98%+ accuracy within 4 seconds. The application uses a camera to capture images of people in a given area, which are then processed by the machine learning model to recognize the faces.
 
 
-<h4>Face Recognition Web Application for Crime Prevention.</h4>
-This code sample consists of Machine Learning Model & a Web Application for face recognition.
+### How it will prevent crime?
 
-<b>How it will prevent crime?</b><br/>
-Whenever a person is recognized with 98%+ accuracy, the web app sends an email to the admin and can also send it to Police. 
+Whenever a person is recognized with 98%+ accuracy, the web application sends an email to the admin and/or the police. This allows for quick identification and intervention in case of suspicious or criminal activity.
 
-<b>How does it work?</b><br/>
+The technology behind this application can be an effective tool for crime prevention and can be used in various settings such as public places, residential areas, and businesses to enhance security and safety. The application can also be customized to fit the specific needs of different users, making it a versatile solution for preventing crime.
+
+### How does it work?
+
 On executing file face_recognition_model.ipynb in the Github repository, the following steps are done:
 01) Capture images to train a model.
 02) Image Labelling of captured images
@@ -35,7 +36,7 @@ On executing file face_recognition_model.ipynb in the Github repository, the fol
 05) Model Evaluation
 06) Model Export (JSON file is created)
 
-<b>Model Training Tech Stack: </b><br/>
+###  Model Training Tech Stack:
 01) Python
 02) Tensorflow Object Detection API
 03) OpenCV
@@ -43,7 +44,7 @@ On executing file face_recognition_model.ipynb in the Github repository, the fol
 Then we host this JSON File and link it with our web application.
 The web application uses the deployed Machine Learning model and can detect faces with 98%+ accuracy within 4 sec.
 
-<b>Web Application Tech Stack: </b><br/>
+### Web Application Tech Stack:
 01) Backend: Next.JS, Node.JS
 02) Database: MongoDB
 03) Frontend: HTML5, CSS3, Javascript & JSX
