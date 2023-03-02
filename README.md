@@ -1,18 +1,17 @@
 
-# Face Recognition Using Tensorflow Object Detection
+# Crime Detection System using Face Recognition based on Machine Learning
 
-This Notebook provides a complete set of code to be able to train and leverage your own custom model.
+The Face Recognition Web Application for Crime Prevention is an application that utilizes machine learning technology to recognize faces and prevent crime.
 
-![Architecture](./architecture.png)
-
+The system is designed to identify suspects by comparing their facial features with those in a database of known criminals. 
 
 <b>Supporting Material:</b> https://drive.google.com/file/d/1pcG-72WVB-8UwsnUoz_L73FGz-k1Bvim/view?usp=sharing
-
-
 <b>Web App Link:</b> https://frme.igscs.in/login 
 <br/>
 Username: Admin_1 
 Password: 12345678
+
+![Architecture](./architecture.png)
 
 
 <h4>Face Recognition Web Application for Crime Prevention.</h4>
