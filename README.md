@@ -8,7 +8,7 @@ The system is designed to identify suspects by comparing their facial features w
 
 <b>Supporting Material:</b> https://drive.google.com/file/d/1pcG-72WVB-8UwsnUoz_L73FGz-k1Bvim/view?usp=sharing
 
-
+<b>Demo:</b> https://drive.google.com/file/d/11jhmMEJVZSO-kbxkSmHZOaZBaBlP3Xfg/view?usp=sharing
 
 ## Publication
 
