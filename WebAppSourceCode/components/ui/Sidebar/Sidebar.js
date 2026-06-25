@@ -64,7 +64,7 @@ const structure = [
   {
     id: 12,
     label: "Resume Website",
-    link: "https://apoorva-verma.netlify.app/",
+    link: "https://apoorvaverma.in/",
     icon: <LaptopMacIcon/>
   },
   {
